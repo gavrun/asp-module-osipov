@@ -1,0 +1,26 @@
+﻿@page
+
+@* WebAppCoreProduct.Pages.IndexModel *@
+
+@model IndexModel
+<form method="post">
+    <label for="name">Product name</label><br />
+    <input type="text" name="name" /><br />
+    <label for="price">Price</label><br />
+    <input type="number" name="price" /><br /><br />
+    <input type="submit" value="Get discount" /><br />
+</form>
+
+@{
+    // @if (Model.IsCorrect)
+    // {
+    //     <p>Name: <b>@Model.Product.Name</b></p>
+    //     <p>Price: <b>@Model.Product.Price</b></p>
+    // }
+    // else
+    // {
+    //     <p>Warning: Incorrect data sent</p>
+    // }
+}
+
+<h3>@Model.MessageResult</h3>
