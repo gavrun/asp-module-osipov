@@ -1,0 +1,17 @@
+﻿@page
+
+@* WebAppCoreProduct.Pages.IndexModel *@
+
+@model IndexModel
+
+@{
+    @if (Model.IsCorrect)
+    {
+        <p>Name: <b>@Model.Name</b></p>
+        <p>Price: <b>@Model.Price</b></p>
+    }
+    else
+    {
+        <p>Warning: Incorrect data sent</p>
+    }
+}
