@@ -1,0 +1,29 @@
+﻿@page "{handler?}"
+
+@model WebAppCoreProduct.Pages.ProductModel
+
+@{
+    // Layout = "_Layout";
+}
+
+<form method="post">
+    <label for="name">Product name</label><br />
+    <input type="text" name="name" /><br />
+
+    <label for="price">Price</label><br />
+    <input type="number" name="price" /><br /><br />
+
+    <input type="submit" asp-page-handler="" value="Get discount" /><br />
+
+    <label for="discont">Your discount voucher (%)</label><br />
+    <input type="number" name="discont" /><br />
+
+    <input type="submit" asp-page-handler="Discont" value="Get personal discount" /><br />
+
+    <label for="cash">Cashback ($)</label><br />
+    <input type="number" name="cashback" value="5" readonly /><br />
+
+    <input type="submit" asp-page-handler="Cash" value="Pay with cash balance" /><br />
+</form>
+
+<h3>@Model.MessageResult</h3>
