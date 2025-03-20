@@ -1,1 +1,1 @@
-# asp-module-osipov
+# asp-razor-module-osipov
